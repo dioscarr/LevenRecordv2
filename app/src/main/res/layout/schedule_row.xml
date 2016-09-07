@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:padding="6dip"
+    android:background="#FFFFFF">
+
+<LinearLayout
+    android:id="@+id/rowID"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/ScheduleRowTimeID"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+       android:paddingRight="10dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="8:00 AM"
+        android:textSize="12sp"
+        android:paddingLeft="10dp"
+        android:background="#f6f6f6" />
+    <View
+        android:layout_width="4dp"
+        android:layout_height="fill_parent"
+        android:background="#52a8a0" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_marginTop="30dp"
+            android:id="@+id/user1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_android_black_24dp"
+            android:layout_marginLeft="15dp"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#f2f2f2"
+            android:layout_weight="0.23" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_marginTop="30dp"
+            android:id="@+id/user2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/user1"
+            android:src="@drawable/ic_android_black_24dp"
+            android:layout_marginLeft="15dp"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#f2f2f2"
+            android:layout_weight="0.23" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:id="@+id/ScheduleRowDescriptionID"
+            android:paddingLeft="10dp"
+            android:layout_alignWithParentIfMissing="true"
+            android:text="Example application"
+            android:textSize="16sp"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/isBooked"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:checked="false" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+    <View
+        android:layout_alignBottom="@id/rowID"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+
+
+
+
+</RelativeLayout>
